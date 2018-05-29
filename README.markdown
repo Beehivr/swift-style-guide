@@ -190,12 +190,18 @@ class MyViewController: UIViewController {
   // class stuff here
 }
 
+/ --------------------------------
 // MARK: - UITableViewDataSource
+/ --------------------------------
+
 extension MyViewController: UITableViewDataSource {
   // table view data source methods
 }
 
+/ --------------------------------
 // MARK: - UIScrollViewDelegate
+/ --------------------------------
+
 extension MyViewController: UIScrollViewDelegate {
   // scroll view delegate methods
 }
@@ -299,6 +305,20 @@ class TestDatabase : Database {
 * Avoid trailing whitespaces at the ends of lines.
 
 * Add a single newline character at the end of each file.
+
+* Guard statement with only `return` in body should be a single line.
+
+**Preferred:**
+```swift
+guard let value = value else { return }
+```
+
+**Not Preferred:**
+```swift
+guard let value = value else {
+  return
+}
+```
 
 ## Comments
 
