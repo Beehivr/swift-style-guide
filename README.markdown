@@ -36,6 +36,7 @@ Our overarching goals are clarity, consistency and brevity, in that order.
 * [Closure Expressions](#closure-expressions)
 * [Types](#types)
   * [Constants](#constants)
+  * [Static Type Properties](#static-type-property)
   * [Static Methods and Variable Type Properties](#static-methods-and-variable-type-properties)
   * [Optionals](#optionals)
   * [Lazy Initialization](#lazy-initialization)
@@ -642,7 +643,15 @@ Constants are defined using the `let` keyword, and variables with the `var` keyw
 
 **Tip:** A good technique is to define everything using `let` and only change it to `var` if the compiler complains!
 
-You can define constants on a type rather than on an instance of that type using type properties. To declare a type property as a constant simply use `static let`. Type properties declared in this way are generally preferred over global constants because they are easier to distinguish from instance properties. Example:
+### Static type property
+
+You can define constants on a type rather than on an instance of that type using type properties.
+
+To declare a type property as a constant simply use `static let`. Type properties declared in this way are generally preferred over global constants because they are easier to distinguish from instance properties.
+
+Also, static type property follow our camel case convention. Since we always call a static constant after its type (ex: MyType.myConstant), is it obvious that myConstant is static.
+
+Example:
 
 **Preferred:**
 ```swift
